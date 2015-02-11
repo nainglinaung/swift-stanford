@@ -13,7 +13,9 @@ class ViewController: UIViewController {
 
     @IBOutlet var Answer: UILabel!
     var userTypedIsOrNot = false
-
+    
+    var brain = CalculatorBrain()
+    
     @IBAction func AnyKey(sender: UIButton) {
         let number = sender.currentTitle!
         
@@ -25,12 +27,14 @@ class ViewController: UIViewController {
         }
     }
     
-    var operendStack = Array<Double>()
     
     @IBAction func enter() {
         userTypedIsOrNot = false
-        operendStack.append(displayValue)
-        println("Operend is \(operendStack)")
+        if let result =  brain.pushOperend(displayValue) {
+            displayValue = result
+        } else {
+            displayValue = 0
+        }
     }
     
     var displayValue:Double {
@@ -42,38 +46,20 @@ class ViewController: UIViewController {
           return NSNumberFormatter().numberFromString(Answer.text!)!.doubleValue
         }
     }
-
-    
-   
-    
     
     @IBAction func performOperation(sender: UIButton) {
-        let operation = sender.currentTitle!
-        switch operation {
-            case "+": performOperation { $0 + $1 }
-            case "−": performOperation { $1 - $0 }
-            case "×": performOperation { $0 * $1}
-            case "÷": performOperation { $1 / $0 }
-            case "√": performOperation { $0 }
-            default:break
+        if userTypedIsOrNot {
+            enter()
+        }
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0 
+            }
         }
         
     }
     
-    
-    func performOperation(operation: Double -> Double) {
-        if operendStack.count >= 1 {
-            displayValue = operation(operendStack.removeLast())
-            enter()
-        }
-    }
-    
-    func performOperation(operation: (Double,Double) -> Double){
-        if operendStack.count >= 2 {
-            displayValue = operation(operendStack.removeLast(),operendStack.removeLast())
-            enter()
-        }
-    }
-
 }
 
