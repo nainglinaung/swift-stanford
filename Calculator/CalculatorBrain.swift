@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 
 class CalculatorBrain{
@@ -29,7 +30,9 @@ class CalculatorBrain{
         knownOps["×"] = Op.BinaryOperation("×",*)
         knownOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
         knownOps["√"] = Op.UnaryOperation("√",sqrt)
-        
+        knownOps["sin"] = Op.UnaryOperation("sin",sin)
+        knownOps["cos"] = Op.UnaryOperation("cos",cos)
+        knownOps["π"] =  Op.UnaryOperation("π"){ $0 * M_PI}
         
         //let brain = CalculatorBrain()
     }
@@ -60,6 +63,8 @@ class CalculatorBrain{
         }
             return (nil,ops)
     }
+    
+    
     
     
     func evaulate() -> Double? {
