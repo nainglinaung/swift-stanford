@@ -16,6 +16,19 @@ class CalculatorBrain{
         case Operend(Double)
         case UnaryOperation(String,Double ->Double)
         case BinaryOperation(String,(Double,Double) -> Double)
+        
+        var description: String {
+            get{
+                switch self {
+                case .Operend(let operend):
+                    return "\(operend)"
+                case .UnaryOperation(let symbol, _):
+                    return symbol
+                case .BinaryOperation(let symbol, _):
+                    return symbol
+                }
+            }
+        }
     }
     
     private var opStack = [Op]();
@@ -36,6 +49,30 @@ class CalculatorBrain{
         
         //let brain = CalculatorBrain()
     }
+    
+  
+    
+    var program: AnyObject {
+        // guaranteed to be a Property List
+        get {
+            return opStack.map {$0.description }
+        }
+        set {
+            if let opSymbols =  newValue  as? Array<String> {
+                var newOpStack = [Op]();
+                for opSymbol in opSymbols {
+                    if let op = knownOps[opSymbol] {
+                        newOpStack.append(op)
+                    } else if let operend = NSNumberFormatter().numberFromString(opSymbol)?.doubleValue {
+                        newOpStack.append(.Operend(operend))
+                    }
+                    opStack = newOpStack
+                }
+            }
+        }
+    }
+    
+    
     
     private func evaulate(ops:[Op]) ->(result:Double?, remainingOps:[Op])
     {
