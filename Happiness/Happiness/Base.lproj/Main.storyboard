@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U4g-bT-4u0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Happiness View Controller-->
+        <scene sceneID="X3s-AF-1Ej">
+            <objects>
+                <viewController id="U4g-bT-4u0" customClass="HappinessViewController" customModule="Happiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CXU-zh-B63"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXM-Ps-PZ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zHM-7x-evl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XvP-mZ-Fp8" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XvP-mZ-Fp8" firstAttribute="top" secondItem="zHM-7x-evl" secondAttribute="top" id="2Xe-8s-xad"/>
+                            <constraint firstItem="XvP-mZ-Fp8" firstAttribute="bottom" secondItem="KXM-Ps-PZ8" secondAttribute="top" id="f51-xr-wkv"/>
+                            <constraint firstAttribute="trailing" secondItem="XvP-mZ-Fp8" secondAttribute="trailing" id="ocp-6I-Fjv"/>
+                            <constraint firstItem="XvP-mZ-Fp8" firstAttribute="leading" secondItem="zHM-7x-evl" secondAttribute="leading" id="xk1-gf-6K7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uia-2o-M1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="353"/>
+        </scene>
+    </scenes>
+</document>
