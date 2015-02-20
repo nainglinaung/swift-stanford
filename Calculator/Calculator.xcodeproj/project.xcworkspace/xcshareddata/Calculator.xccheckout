@@ -14,11 +14,11 @@
 		<string>github.com:nainglinaung/swift-stanford.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Calculator.xcodeproj</string>
+	<string>Calculator/Calculator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:nainglinaung/swift-stanford.git</string>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Calculator</string>
+			<string>CS193P</string>
 		</dict>
 	</array>
 </dict>
