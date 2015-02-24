@@ -8,6 +8,18 @@
 
 import UIKit
 
-class HappinessViewController: UIViewController {
-
+class HappinessViewController: UIViewController
+{
+    var happiness: Int = 50 {
+        // 0 is very sad, 100 is ecstastic
+        didSet {
+            happiness = min(max(happiness,0),100)
+            updateUI()
+            println("Happiness is = \(happiness)")
+        }
+    }
+    
+    func updateUI() {
+        
+    }
 }

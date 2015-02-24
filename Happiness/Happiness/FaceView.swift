@@ -7,16 +7,18 @@
 //
 
 import UIKit
+@IBDesignable 
 
 class FaceView: UIView {
 
     var faceCenter: CGPoint {
         return convertPoint(center, fromView:superview)
     }
+    @IBInspectable var scale:CGFloat  = 0.9 {didSet { setNeedsDisplay() } }
+    @IBInspectable var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
+    @IBInspectable var color: UIColor = UIColor.blueColor(){ didSet { setNeedsDisplay() } }
     
-    var scale:CGFloat {
-        return 0.9
-    }
+    
     
     private struct Scaling {
         static let FaceRadiusToEyeRadiusRatio: CGFloat = 10
@@ -80,8 +82,6 @@ class FaceView: UIView {
         return min(bounds.size.width,bounds.size.height) / 2 * scale
     }
     
-    var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
-    var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
     
     
     override func drawRect(rect: CGRect) {
