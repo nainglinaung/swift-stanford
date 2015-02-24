@@ -7,7 +7,13 @@
 //
 
 import UIKit
-@IBDesignable 
+
+
+protocol FaceViewDataSource: class {
+    func similinessForFaceView(sender: FaceView) -> Double?
+}
+
+@IBDesignable
 
 class FaceView: UIView {
 
@@ -29,6 +35,9 @@ class FaceView: UIView {
         static let FaceRadiusToMouthOffsetRatio: CGFloat = 3
         
     }
+    
+    weak var dataSource:FaceViewDataSource?
+    
     
     private enum Eye {case Left, Right}
     
@@ -95,7 +104,7 @@ class FaceView: UIView {
         bezierPathForEye(.Left).stroke()
         bezierPathForEye(.Right).stroke()
         
-        let smiliness = 0.75
+        let smiliness = dataSource?.similinessForFaceView(self) ?? 0.0
         let smilepath = bezierPathForSmile(smiliness)
         smilepath.stroke()
     }
