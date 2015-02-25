@@ -20,9 +20,15 @@ class FaceView: UIView {
     var faceCenter: CGPoint {
         return convertPoint(center, fromView:superview)
     }
+    
     @IBInspectable var scale:CGFloat  = 0.9 {didSet { setNeedsDisplay() } }
     @IBInspectable var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
     @IBInspectable var color: UIColor = UIColor.blueColor(){ didSet { setNeedsDisplay() } }
+    
+    weak var dataSource:FaceViewDataSource?
+    
+    private enum Eye {case Left, Right}
+    
     
     
     
@@ -33,13 +39,15 @@ class FaceView: UIView {
         static let FaceRadiusToMouthWidthRatio: CGFloat = 1
         static let FaceRadiusToMouthHeightRatio: CGFloat = 3
         static let FaceRadiusToMouthOffsetRatio: CGFloat = 3
-        
     }
     
-    weak var dataSource:FaceViewDataSource?
     
-    
-    private enum Eye {case Left, Right}
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            scale *= gesture.scale
+            gesture.scale = 1
+        }
+    }
     
     private func bezierPathForEye(whichEye: Eye) -> UIBezierPath {
         
