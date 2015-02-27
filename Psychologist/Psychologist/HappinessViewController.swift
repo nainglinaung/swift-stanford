@@ -32,7 +32,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     }
     
     func updateUI() {
-        faceView.setNeedsDisplay()
+        faceView?.setNeedsDisplay()
     }
     
     private struct Constants {
