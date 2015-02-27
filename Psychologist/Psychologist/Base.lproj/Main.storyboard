@@ -77,13 +77,24 @@
                                     <segue destination="79N-I2-Nnb" kind="showDetail" identifier="meh" id="UoA-UA-94m"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbR-a5-RS9">
+                                <rect key="frame" x="273" y="376" width="54" height="30"/>
+                                <state key="normal" title="Nothing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="833-7D-biI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6wf-GE-6O1" firstAttribute="leading" secondItem="Yiq-Af-mqc" secondAttribute="leading" id="03q-5r-3FK"/>
+                            <constraint firstItem="rbR-a5-RS9" firstAttribute="top" secondItem="Yiq-Af-mqc" secondAttribute="bottom" constant="8" symbolic="YES" id="55J-MS-9hx"/>
                             <constraint firstItem="Ven-sE-vja" firstAttribute="top" secondItem="6wf-GE-6O1" secondAttribute="bottom" constant="8" symbolic="YES" id="59S-xd-JeT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ven-sE-vja" secondAttribute="bottom" constant="268" id="AMa-G6-OnN"/>
                             <constraint firstItem="Yiq-Af-mqc" firstAttribute="top" secondItem="Ven-sE-vja" secondAttribute="bottom" constant="8" symbolic="YES" id="CEJ-MB-a41"/>
+                            <constraint firstItem="rbR-a5-RS9" firstAttribute="centerX" secondItem="Yiq-Af-mqc" secondAttribute="centerX" id="Eh0-3w-xeb"/>
                             <constraint firstItem="6wf-GE-6O1" firstAttribute="centerX" secondItem="Ven-sE-vja" secondAttribute="centerX" id="U2j-hw-nI6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lta-Mj-N9f" secondAttribute="bottom" constant="518" id="ceZ-lX-1mf"/>
                             <constraint firstItem="Ven-sE-vja" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gZN-Ht-sF2"/>
@@ -105,10 +116,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="suE-08-EfC"/>
+                    <connections>
+                        <segue destination="79N-I2-Nnb" kind="showDetail" identifier="Nothing" id="B15-DR-L9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="-338"/>
+            <point key="canvasLocation" x="1153" y="-446"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="WpA-pP-VZ7">
@@ -215,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9tM-FE-eaD"/>
+        <segue reference="B15-DR-L9n"/>
     </inferredMetricsTieBreakers>
 </document>
