@@ -177,7 +177,15 @@
                             <constraint firstItem="Ef8-R4-o4S" firstAttribute="top" secondItem="nsT-YY-ogy" secondAttribute="top" id="rwg-xJ-dWT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="II4-bS-XUc"/>
+                    <navigationItem key="navigationItem" id="II4-bS-XUc">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="sGK-8D-uTz">
+                            <connections>
+                                <segue destination="tUG-du-gr8" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="sGK-8D-uTz" id="8dz-Yo-ytO">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="Ef8-R4-o4S" id="zEG-ri-KG9"/>
                     </connections>
@@ -190,6 +198,24 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1243" y="528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qf5-77-m7a">
+            <objects>
+                <viewController id="tUG-du-gr8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6U9-GE-Lkg"/>
+                        <viewControllerLayoutGuide type="bottom" id="wwc-HD-Oev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0j8-xC-OJV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wa-pF-I4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059" y="409"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fUw-Sx-LjS">
