@@ -17,5 +17,51 @@
             endingLineNumber = "9">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Psychologist/DiagnosticHappinessViewController.swift"
+            timestampString = "446889390.580443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "DiagnosticHappinessViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_func0"
+                  moduleName = "Psychologist"
+                  urlString = "file:///Users/hivelocity/Desktop/projects/Swift/CS193P/Psychologist/Psychologist/DiagnosticHappinessViewController.swift"
+                  timestampString = "446889390.594914"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Psychologist.DiagnosticHappinessViewController.(History in _B9094CBEC5C47E1D5430023A5106C534).segueIdentifier.mutableAddressor : Swift.String"
+                  moduleName = "Psychologist"
+                  urlString = "file:///Users/hivelocity/Desktop/projects/Swift/CS193P/Psychologist/Psychologist/DiagnosticHappinessViewController.swift"
+                  timestampString = "446889390.595086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

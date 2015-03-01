@@ -11,7 +11,17 @@ import UIKit
 
 class DiagnosticHappinessViewController: HappinessViewController
 {
-    var diagnosticHistory = [Int]()
+    
+    
+    private let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var diagnosticHistory:[Int] {
+    get { return defaults.objectForKey(History.DefaultKey) as? [Int] ?? []  }
+    set { defaults.setObject(newValue,forKey: History.DefaultKey) }
+    }
+    
+    
+    //= [Int]()
     
     
     override var happiness: Int {
@@ -23,6 +33,7 @@ class DiagnosticHappinessViewController: HappinessViewController
     
     private struct History {
         static let segueIdentifier = "Show Diagnostic History"
+        static let DefaultKey = "diagnosticHappiness"
     }
     
     
