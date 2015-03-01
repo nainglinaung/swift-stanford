@@ -15,6 +15,8 @@
 		2C11938A1AA0129500E1CD1D /* PsychologistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1193891AA0129500E1CD1D /* PsychologistTests.swift */; };
 		2C1193951AA01FDB00E1CD1D /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1193931AA01FDB00E1CD1D /* HappinessViewController.swift */; };
 		2C1193961AA01FDB00E1CD1D /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1193941AA01FDB00E1CD1D /* FaceView.swift */; };
+		2C1193C61AA2F2D100E1CD1D /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1193C51AA2F2D100E1CD1D /* TextViewController.swift */; };
+		2C1193C81AA2F4B400E1CD1D /* DiagnosticHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1193C71AA2F4B400E1CD1D /* DiagnosticHappinessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		2C1193891AA0129500E1CD1D /* PsychologistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychologistTests.swift; sourceTree = "<group>"; };
 		2C1193931AA01FDB00E1CD1D /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		2C1193941AA01FDB00E1CD1D /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		2C1193C51AA2F2D100E1CD1D /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		2C1193C71AA2F4B400E1CD1D /* DiagnosticHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosticHappinessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				2C1193931AA01FDB00E1CD1D /* HappinessViewController.swift */,
 				2C1193941AA01FDB00E1CD1D /* FaceView.swift */,
 				2C1193771AA0129500E1CD1D /* Main.storyboard */,
+				2C1193C51AA2F2D100E1CD1D /* TextViewController.swift */,
+				2C1193C71AA2F4B400E1CD1D /* DiagnosticHappinessViewController.swift */,
 				2C1193711AA0129500E1CD1D /* Supporting Files */,
 			);
 			path = Psychologist;
@@ -218,10 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1193C61AA2F2D100E1CD1D /* TextViewController.swift in Sources */,
 				2C1193761AA0129500E1CD1D /* PsychologistViewController.swift in Sources */,
 				2C1193951AA01FDB00E1CD1D /* HappinessViewController.swift in Sources */,
 				2C1193741AA0129500E1CD1D /* AppDelegate.swift in Sources */,
 				2C1193961AA01FDB00E1CD1D /* FaceView.swift in Sources */,
+				2C1193C81AA2F4B400E1CD1D /* DiagnosticHappinessViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +423,7 @@
 				2C11938F1AA0129500E1CD1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C1193901AA0129500E1CD1D /* Build configuration list for PBXNativeTarget "PsychologistTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				2C1193921AA0129500E1CD1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
