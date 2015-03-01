@@ -9,7 +9,7 @@
 import UIKit
 
 
-class DiagnosticHappinessViewController: HappinessViewController
+class DiagnosticHappinessViewController: HappinessViewController, UIPopoverPresentationControllerDelegate
 {
     
     
@@ -42,6 +42,9 @@ class DiagnosticHappinessViewController: HappinessViewController
             switch identifier {
             case History.segueIdentifier:
                 if let tvc = segue.destinationViewController as? TextViewController {
+                    if let ppc = tvc.popoverPresentationController {
+                        ppc.delegate = self
+                    }
                     tvc.text = "\(diagnosticHistory)"
                 }
             default:break
@@ -49,5 +52,9 @@ class DiagnosticHappinessViewController: HappinessViewController
         }
     }
     
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
     
 }
