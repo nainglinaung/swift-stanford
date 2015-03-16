@@ -13,6 +13,7 @@
 		2CAA9EC31AB6B65D004EFD72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9EC11AB6B65D004EFD72 /* LaunchScreen.xib */; };
 		2CAA9ECF1AB6B65D004EFD72 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9ECE1AB6B65D004EFD72 /* AnimationTests.swift */; };
 		2CAA9ED91AB6B72B004EFD72 /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */; };
+		2CAA9EDB1AB6BEFC004EFD72 /* DropItBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9EDA1AB6BEFC004EFD72 /* DropItBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2CAA9ECD1AB6B65D004EFD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CAA9ECE1AB6B65D004EFD72 /* AnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTests.swift; sourceTree = "<group>"; };
 		2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
+		2CAA9EDA1AB6BEFC004EFD72 /* DropItBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				2CAA9EB81AB6B65D004EFD72 /* AppDelegate.swift */,
 				2CAA9EBC1AB6B65D004EFD72 /* Main.storyboard */,
 				2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */,
+				2CAA9EDA1AB6BEFC004EFD72 /* DropItBehavior.swift */,
 				2CAA9EBF1AB6B65D004EFD72 /* Images.xcassets */,
 				2CAA9EC11AB6B65D004EFD72 /* LaunchScreen.xib */,
 				2CAA9EB61AB6B65D004EFD72 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				2CAA9ED91AB6B72B004EFD72 /* DropItViewController.swift in Sources */,
 				2CAA9EB91AB6B65D004EFD72 /* AppDelegate.swift in Sources */,
+				2CAA9EDB1AB6BEFC004EFD72 /* DropItBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
