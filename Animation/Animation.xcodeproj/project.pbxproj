@@ -14,6 +14,7 @@
 		2CAA9ECF1AB6B65D004EFD72 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9ECE1AB6B65D004EFD72 /* AnimationTests.swift */; };
 		2CAA9ED91AB6B72B004EFD72 /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */; };
 		2CAA9EDB1AB6BEFC004EFD72 /* DropItBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9EDA1AB6BEFC004EFD72 /* DropItBehavior.swift */; };
+		2CAA9EDD1AB6DB27004EFD72 /* BezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9EDC1AB6DB27004EFD72 /* BezierPathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2CAA9ECE1AB6B65D004EFD72 /* AnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTests.swift; sourceTree = "<group>"; };
 		2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
 		2CAA9EDA1AB6BEFC004EFD72 /* DropItBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItBehavior.swift; sourceTree = "<group>"; };
+		2CAA9EDC1AB6DB27004EFD72 /* BezierPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BezierPathView.swift; path = ../BezierPathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		2CAA9EB51AB6B65D004EFD72 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				2CAA9EDC1AB6DB27004EFD72 /* BezierPathView.swift */,
 				2CAA9EB81AB6B65D004EFD72 /* AppDelegate.swift */,
 				2CAA9EBC1AB6B65D004EFD72 /* Main.storyboard */,
 				2CAA9ED81AB6B72B004EFD72 /* DropItViewController.swift */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAA9EDD1AB6DB27004EFD72 /* BezierPathView.swift in Sources */,
 				2CAA9ED91AB6B72B004EFD72 /* DropItViewController.swift in Sources */,
 				2CAA9EB91AB6B65D004EFD72 /* AppDelegate.swift in Sources */,
 				2CAA9EDB1AB6BEFC004EFD72 /* DropItBehavior.swift in Sources */,

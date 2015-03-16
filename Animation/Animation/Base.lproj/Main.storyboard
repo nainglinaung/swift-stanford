@@ -19,12 +19,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mr-j6-ZU4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKM-eX-NGP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKM-eX-NGP" customClass="BezierPathView" customModule="Animation" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="1f0-SM-oft" appends="YES" id="3SO-Qp-y39"/>
+                                            <outletCollection property="gestureRecognizers" destination="KnV-wN-1Xh" appends="YES" id="D9G-v4-y3k"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -55,6 +56,11 @@
                         <action selector="drop:" destination="BYZ-38-t0r" id="d3u-G6-Z4g"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KnV-wN-1Xh">
+                    <connections>
+                        <action selector="grabDrop:" destination="BYZ-38-t0r" id="BpN-Rr-ofH"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>

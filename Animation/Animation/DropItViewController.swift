@@ -10,7 +10,7 @@ import UIKit
 
 class DropItViewController: UIViewController,UIDynamicAnimatorDelegate {
 
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var gameView: BezierPathView!
     
     lazy var animator: UIDynamicAnimator  = {
        let lazilyCreatedDynamicAnimator =  UIDynamicAnimator(referenceView:self.gameView)
@@ -19,6 +19,30 @@ class DropItViewController: UIViewController,UIDynamicAnimatorDelegate {
     }()
     
     let dropItBehavior = DropItBehavior()
+    
+    var attachment: UIAttachmentBehavior? {
+        willSet{
+            animator.removeBehavior(attachment)
+            gameView.setPath(nil, named: pathName.attachmentPathName)
+        }
+        didSet {
+            if attachment != nil {
+                animator.addBehavior(attachment)
+                attachment?.action =  { [unowned self] in
+                    if let attachedView = self.attachment?.items.first  as? UIView {
+                        let path = UIBezierPath()
+                        self.gameView.setPath(path,named: pathName.attachmentPathName)
+                        path.moveToPoint(self.attachment!.anchorPoint)
+                        path.addLineToPoint(attachedView.center)
+                    }
+
+                
+                }
+                
+                
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -41,6 +65,23 @@ class DropItViewController: UIViewController,UIDynamicAnimatorDelegate {
         drop()
     }
     
+    @IBAction func grabDrop(sender: UIPanGestureRecognizer) {
+        let gesturePoint = sender.locationInView(gameView)
+        switch sender.state {
+        case .Began:
+            if let viewToAttach = lastDroppedView {
+                attachment = UIAttachmentBehavior(item: viewToAttach, attachedToAnchor: gesturePoint)
+                lastDroppedView = nil
+            }
+        case .Changed:
+            attachment?.anchorPoint = gesturePoint
+        case .Ended:
+            attachment = nil
+        default:break
+        }
+    }
+    
+    var lastDroppedView: UIView?
     
     func drop() {
         var frame = CGRect(origin: CGPointZero, size: dropSize)
@@ -48,11 +89,27 @@ class DropItViewController: UIViewController,UIDynamicAnimatorDelegate {
         
         let dropView = UIView(frame:frame)
         dropView.backgroundColor = UIColor.random
+        lastDroppedView = dropView
         
         dropItBehavior.addDrop(dropView)
         
     }
     
+    struct pathName {
+        static let middleBerrier = "middle Berrier"
+        static let attachmentPathName = "Attachment Path Name"
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let berrierSize = dropSize
+        let berrierOrigin = CGPoint(x: gameView.bounds.midX-berrierSize.width/2, y: gameView.bounds.midY-berrierSize.height/2)
+        
+        let path = UIBezierPath(ovalInRect: CGRect(origin: berrierOrigin, size: berrierSize))
+        dropItBehavior.addBerrier(path, name: pathName.middleBerrier)
+        gameView.setPath(path, named: pathName.middleBerrier)
+        
+    }
     
     func removeCompletedRow() {
         var dropsToRemove = [UIView]()

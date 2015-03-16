@@ -20,11 +20,17 @@ class DropItBehavior: UIDynamicBehavior {
     
     lazy var dropBehavior :UIDynamicItemBehavior = {
         let lazilyCreatedDropBehavior =  UIDynamicItemBehavior()
-        lazilyCreatedDropBehavior.allowsRotation = false
+        lazilyCreatedDropBehavior.allowsRotation = true
         lazilyCreatedDropBehavior.elasticity = 0.75
         return lazilyCreatedDropBehavior
     }()
     
+    
+    func addBerrier(path:UIBezierPath, name:String){
+        collider.removeBoundaryWithIdentifier(name)
+        collider.addBoundaryWithIdentifier(name, forPath: path)
+        
+    }
     
     override init() {
         super.init()
