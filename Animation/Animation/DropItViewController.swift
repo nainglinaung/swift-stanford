@@ -13,7 +13,12 @@ class DropItViewController: UIViewController {
     @IBOutlet weak var gameView: UIView!
     
     let gravity = UIGravityBehavior()
-  
+    
+    lazy var collider:UICollisionBehavior = {
+        let lazilyCreatedCollider = UICollisionBehavior()
+        lazilyCreatedCollider.translatesReferenceBoundsIntoBoundary = true
+        return lazilyCreatedCollider
+    }()
     
     lazy var animator: UIDynamicAnimator  = {
        let lazilyCreatedDynamicAnimator =  UIDynamicAnimator(referenceView:self.gameView)
@@ -24,7 +29,7 @@ class DropItViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animator.addBehavior(gravity)
-        
+        animator.addBehavior(collider)
     }
     
     var dropsPerRow = 10
@@ -48,6 +53,7 @@ class DropItViewController: UIViewController {
         
         gameView.addSubview(dropView)
         gravity.addItem(dropView)
+        collider.addItem(dropView)
         
     }
 
