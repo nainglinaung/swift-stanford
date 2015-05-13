@@ -12,22 +12,34 @@
 	<dict>
 		<key>91F520D75E81D7669088DD6468A40E6EFB75D575</key>
 		<string>github.com:nainglinaung/swift-udemy.git</string>
+		<key>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</key>
+		<string>github.com:nainglinaung/swift-stanford.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Cassini/Cassini.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>91F520D75E81D7669088DD6468A40E6EFB75D575</key>
+		<string>../../../../udemy</string>
+		<key>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:nainglinaung/swift-udemy.git</string>
+	<string>github.com:nainglinaung/swift-stanford.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>91F520D75E81D7669088DD6468A40E6EFB75D575</string>
+	<string>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS193P</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

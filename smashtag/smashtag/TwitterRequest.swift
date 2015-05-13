@@ -90,7 +90,7 @@ public class TwitterRequest
     //   with the JSON results converted to a Property List
     
     public func fetch(handler: (results: PropertyList?) -> Void) {
-        performTwitterRequest(SLRequestMethod.GET, handler)
+        performTwitterRequest(SLRequestMethod.GET, handler: handler)
     }
     
     // generates a request for older Tweets than were returned by self
